@@ -1,0 +1,109 @@
+Framework:
+---------
+
+
+1. Data driven 
+2. Page Object Model
+3. JUnit
+4. TestNG
+
+-> Cucumber
+
+Pre - requisite:
+
+1. Maven Project.
+2. Base class Creation
+
+
+Maven Project:
+--------------
+
+Java project ---> 
+
+1. Folder structure.   
+	-> JRE System library
+	-> src
+2. Dependency management.
+	-> jar file 
+
+Maven Project --->
+	-> Contains different folder structure.
+	-> Very easy when compared to jar file
+
+
+15 Jar file:
+------------
+
+1 Jar file configuration time -> 2 mints
+15 -> 30 mints
+Version update -> 2.3 -> 2.34 --> 2 mints
+
+
+When you go for project ? 
+
+1 dependency ->less than a minute
+
+
+Advantage of maven over java:
+
+1. Dependency management.
+2. Folder structure.
+3. Maven commands.
+
+
+Steps to create a Maven project:
+--------------------------------
+
+1. File -> Click -> New -> Select Maven project.
+2. Select the check box (Create a simple maven project) and click Next.
+3. Mandatory fields:
+	1. group id    ->  any name in format package name(Eg: com.sample, org.sample)
+	2. Artifact id ->  Project name
+4. Goto pom.xml (Note: If you get any error in project tag, add s in first two http and save).
+
+
+Steps to add dependency in a maven project:
+-------------------------------------------
+
+1. Open chrome and type the required dependency (Selenium maven dependency).
+2. Click the first link (Maven Repository).
+3. Select the latest verion.
+4. Copy the dependency.
+5. In pom.xml below version create dependencie tag
+	<dependencies>
+	</dependencies>
+6. Paste the copied dependecy under dependencies tag and save it (ctrl + s).
+
+
+Naming conversion for an element:
+---------------------------------
+
+-> text box     : txtUsername, txtPassword
+-> button       : btnLogin, btnSignUp
+-> text field   : textWelcomeMessage
+-> radio button : rdoMale
+-> Check box    : chkBox
+-> Drop down    : ddnCountry
+
+
+2. Base class: 
+--------------
+
+-> It is an utility class (Contains all methods)
+-> We can access that class methods using extends keyword in another class.
+-> Why we go for baseclass ?
+	1. To avoid memory wastage.
+	2. Code reusability.
+	3. Code simplify.
+
+1. What is void ?
+	-> Returns nothing.
+2. What is Return type ?
+	-> It will return something.
+3. What is paramters ?
+	-> Some input which is required for the method.
+
+
+
+
+
