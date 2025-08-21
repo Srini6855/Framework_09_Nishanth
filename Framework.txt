@@ -602,6 +602,81 @@ Topics covered:
 2. Excel write.
 3. Excel update.
 
+********************************************************************************************
+
+Page Object Model:
+------------------
+
+POM: Page Object Model.
+
+- It is a design pattern in Selenium that creates an object repository for storing all web elements.
+- In Page Object Model, consider each web page of an application is a class file.
+- Each class file will contain only corresponding web page elements.
+- Using these elements, testers can perform operation on the website under test.
+
+
+
+1000 Locators --> Single class declared
+500 locator developer changed --> Modifying the locators is difficult.
+To overcome the above problem statement we go for POM(Page Object Model).
+
+Steps to implement Page Object Model:
+-------------------------------------
+
+Step 1: Create each class for respective module.
+Step 2: Declare the locators for each class.
+How to declare a locator ?  -> @FindBy --> To locate a web element (id, name, classname, xpath)
+Step 3: Declare the variables as private.
+Step 4: Generate the getters.
+How to generate getters ?
+Right click -> source -> Generate getters and setters
+Step 5: Write the respective business logic for the class
+Step 6: Create a constructor and use page factory class
+
+PageFactory.initElements(driver, this);
+
+PageFacory -> Class
+initElements -> static method
+driver -> WebDriver reference name
+this -> keyword, initialize the current class locators
+
+With PageFacory:
+
+1. @FindBy()
+2. @FindBys()
+3. @FindAll()
+4. @CacheLookUp()
+
+findElement  - WebElement.
+findElements - List<WebElement>
+
+@FindBy will work on both findElement and findelements
+
+@FindBys() :
+-------------
+
+- To find more than one locator for same web element.
+- It works based on AND condition
+- Combination of id and name locators not possible
+
+Eg: @FindBys({@FIndBy(id='username'), @FindBy(xpath="//input[@name='username']")})
+
+
+@FindAll():
+-----------
+
+- To find more than one locator for same web element.
+- It works based on OR condition.
+- To handle dynamic web locators.
+
+Eg: @FindAll({@FindBy(id="password"), @FindBy(name="password")})
+
+@CacheLookUp():
+--------------
+
+- Memory management.
+
+
 
 
 
